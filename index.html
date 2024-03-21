@@ -42,7 +42,7 @@ const apiKey = "34f0cb4459d68d543eec8ab695184f52";
 const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=banglore";
 
 async function checkWeather(){
-    const response = await fetch(apiUrl + '&appid=${apiKey}');
+      const response = await fetch(apiUrl + `q=${city}&appid=${apiKey}`);
     var data = await response.json();
 
     console.log(data);
