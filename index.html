@@ -54,9 +54,12 @@ async function checkWeather(){
     
     
 }
-
-
-checkWeather();
+    const form = document.getElementById("form");
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const city = document.getElementById("input").value;
+        checkWeather(city);
+      });
 </script>
 
 
