@@ -7,11 +7,12 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <h1 class="title">WEATHER APP</h1>
     <div class="card">
-        <div class="search">
-            <input type="text" placeholder="enter city name" spellcheck="false">
+        <form  class="search" id="form">
+            <input type="text" placeholder="enter city name" spellcheck="false" id="input" autocomplete="off" />
             <button><img src="img/search.png" alt=""></button>
-        </div>
+        </form>
         <div class="weather">
             <img src="img/rain.png"  class="weather-icon">
             <h1 class="temp">22°C</h1>
@@ -39,10 +40,10 @@
 
 
 const apiKey = "34f0cb4459d68d543eec8ab695184f52";
-const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=banglore";
+const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&";
 
-async function checkWeather(){
-      const response = await fetch(apiUrl + `q=${city}&appid=${apiKey}`);
+async function checkWeather(city){
+    const response = await fetch(apiUrl + `q=${city}&appid=${apiKey}`);
     var data = await response.json();
 
     console.log(data);
@@ -51,19 +52,13 @@ async function checkWeather(){
     document.querySelector(".temp").innerHTML = data.main.temp + "°C";
     document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
     document.querySelector(".wind").innerHTML = data.wind.speed + "km/h";
-    
-    
 }
-    const form = document.getElementById("form");
-      form.addEventListener("submit", (e) => {
-        e.preventDefault();
-        const city = document.getElementById("input").value;
-        checkWeather(city);
-      });
+const form = document.getElementById("form");
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const city = document.getElementById("input").value;
+    checkWeather(city);
+});
 </script>
-
-
-
-
 </body>
 </html>
