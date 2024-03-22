@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 body{
-    background: white;
+    background: whitesmoke;
 
 }
 .title{
@@ -15,6 +15,7 @@ body{
     padding-top: 50px;
     font-size: 50px;
     text-shadow: 5px 5px 8px black;
+}
 .card{
     width: 90%;
     max-width: 470px;
