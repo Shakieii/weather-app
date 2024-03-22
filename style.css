@@ -5,9 +5,16 @@
     box-sizing: border-box;
 }
 body{
-    background: #222;
+    background: white;
 
 }
+.title{
+    color: black;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-top: 50px;
+    font-size: 50px;
+    text-shadow: 5px 5px 8px black;
 .card{
     width: 90%;
     max-width: 470px;
