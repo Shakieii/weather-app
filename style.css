@@ -8,12 +8,12 @@ body{
     background-image: url(img/4944764cfbe909488b_0.jpg);
 }
 .title{
-    color: black;
+    color: purple ;
     text-align: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     padding-top: 50px;
     font-size: 50px;
-    text-shadow: 5px 5px 8px black;
+    text-shadow: 5px 5px 8px purple;
 }
 .card{
     width: 90%;
